@@ -490,6 +490,9 @@ header .container>ul li i {
     top:0;
     justify-content: end;
 }
+.belong{
+    overflow: hidden;
+}
 .belong .content>div:last-child p,
 .cont div p {
     display: flex;
