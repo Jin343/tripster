@@ -3,6 +3,7 @@
 }
 
 body {
+    font-family: Tahoma,sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -10,7 +11,6 @@ html {
     scroll-behavior: smooth;
 }
 * {
-    font-family: Tahoma;
     box-sizing: border-box;
 }
 img{
@@ -130,11 +130,16 @@ header .container>ul>li>a {
 }
 
 header .container>ul li a {
+    font-size: 15px;
     text-decoration: none;
     color: white;
     transition: color 0.3s;
 }
-
+@media (max-width:1039px){
+    header .container>ul li a {
+        font-size: 12px;
+    }
+}
 header .container>ul li ul {
     position: absolute;
     margin-top: 11.5px;
@@ -269,7 +274,16 @@ header .container>ul li i {
     font-size: 13px;
     color: rgb(121, 121, 121);
 }
-
+@media (max-width:767px){
+    .special-text {
+        width: 70%;
+    }
+}
+@media (max-width:767px){
+    .special-text {
+        width: 85%;
+    }
+}
 .special-text h3 {
     padding-bottom: -0.5s;
     color: rgb(0, 0, 0);
@@ -289,16 +303,16 @@ header .container>ul li i {
     background-color: var(--orange);
 }
 
-@media (max-width:787px) {
-    .special-text h3 {
-        padding-bottom: 10px;
-        font-size: 25px;
-    }
-}
-
 @media (max-width:1039px){
     .special-text h3 {
         font-size: 30px;
+    }
+}
+
+@media (max-width:787px) {
+    .special-text h3 {
+        padding-bottom: 10px;
+        font-size: 25px ;
     }
 }
 
@@ -380,12 +394,15 @@ header .container>ul li i {
 }
 @media (max-width:767px){
     .belong .content>div:last-child p{
-        margin-left:-10px !important
+        margin-left:-18px !important
     }
-    .belong .content>div:first-child::before,
+    .belong .content>div:first-child::before{
+        height: 99% !important;
+        width: 100% !important;
+    }
     .belong .content>div:last-child>div::before {
-        width: 96%;
-        height: 100%;
+        width: 99% !important;
+        height: 100% !important;
     }}
 .text-above {
     width: 100%;
@@ -412,22 +429,16 @@ header .container>ul li i {
 .text-above h3 {
     font-size: 17px;
 }
-.text-above div + h3 {
-    font-size: 15px;
-}
 }
 @media (max-width:767px){
     .belong .content>div:last-child p span:first-child{
-        font-size: 15px !important;
+        font-size: 17px !important;
     }
     .belong .content>div:last-child p span:last-child{
-        font-size: 15px !important;
+        font-size: 17px !important;
     }
     .text-above h3 {
         font-size: 20px !important;
-    }
-    .text-above div + h3 {
-        font-size: 17px !important;
     }
 }
 .special-button {
@@ -437,7 +448,7 @@ header .container>ul li i {
     background-color: var(--orange);
     color: white;
     border: 0;
-    padding:15px 30px;
+    padding:18px 30px;
     font-size: 15px;
     font-weight: bold;
     letter-spacing: -0.3px;
@@ -446,7 +457,7 @@ header .container>ul li i {
 @media (max-width:1039px){
     .special-button {
         font-size: 13px;
-        padding:13px 25px;
+        padding:18px 25px;
     }
 }
 .special-button:hover {
@@ -469,7 +480,7 @@ header .container>ul li i {
     background-color: var(--orange);
     width: fit-content;
     height: fit-content;
-    padding: 5px 20px;
+    padding: 5px 30px;
     margin-bottom: 10px;
 }
 .belong .content>div:last-child p{
@@ -491,13 +502,13 @@ header .container>ul li i {
 @media (max-width:1039px){
     .belong .content>div:last-child p span:first-child,
     .cont div p span:first-child {
-        font-size: 13px;
+        font-size: 15px;
     padding-left: 0px;
     }
     .belong .content>div:last-child p span:last-child,
     .cont div p span:last-child {
     padding-left: 0px;
-        font-size: 12px;}}
+        font-size: 17px;}}
         
 .HotDeals .container {
     width: 95%;
@@ -562,6 +573,7 @@ header .container>ul li i {
 }
 
 @media (max-width:767px) {
+
     .HotDeals .container .content {
         flex-wrap: wrap;
     }
@@ -569,6 +581,9 @@ header .container>ul li i {
     .HotDeals .container .content .cont {
         margin: 10px 0;
         height: 500px;
+    }
+    .HotDeals .container .content .cont p{
+        width: 35%;
     }
 }
 
@@ -672,8 +687,13 @@ header .container>ul li i {
 .offers .offer .container div:last-of-type {
     margin-top: 18px;
     width: 70%;
+    font-size: 15px;
 }
 
+@media (max-width:767px){
+    .offers .offer .container div:last-of-type {
+        font-size: 13px;}
+}
 .offers .offer .container button {
     margin-bottom: 0;
 }
@@ -739,9 +759,14 @@ header .container>ul li i {
     flex-direction: column;
     justify-content: space-between;
 }
-
+.tours .special-text{
+    margin-bottom: 30px;
+}
+.tours .special-text::before{
+    bottom:-25%;
+}
 .tours .container .content {
-    width: 93%;
+    width: 90%;
     margin: 70px auto 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -755,7 +780,7 @@ header .container>ul li i {
 
 @media (max-width:787px) {
     .tours .container .content {
-        width: 85%;
+        width: 95%;
         margin: 20px auto;
         max-height: 3500px;
         grid-template-rows: repeat(auto-fit, 350px);
@@ -833,11 +858,8 @@ header .container>ul li i {
 
 .email .container .content {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
     padding-left: 50px;
     align-items: start;
-    flex-direction: column;
     color: white;
 }
 
@@ -874,7 +896,7 @@ margin: 10px 0;
 
 @media (max-width:787px) {
     .email .container {
-        width: 80%;
+        min-width: 90%;
     }
     .email .container .content p{
         font-size: 13px;
@@ -886,8 +908,6 @@ margin: 10px 0;
 
 .email .container .content .inputs {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -897,9 +917,14 @@ margin: 10px 0;
     height: 50px;
     font-size: 15px;
     padding-left: 20px;
+    outline: none;
     margin-right: 10px;
 }
-
+@media (max-width:767px){
+    .email .container .content .inputs input[type="email"] {
+        width: 90%;
+    }
+}
 .email .container .content .inputs button {
     background-color: rgb(17, 19, 38);
     color: white;
@@ -966,7 +991,7 @@ footer .container .sec1 p {
 
 footer .container .sec1 .icons {
     color: rgb(218, 218, 218);
-    font-size: 40px;
+    font-size: 30px;
 }
 
 footer .container .sec2 {
