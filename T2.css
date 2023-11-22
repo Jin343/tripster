@@ -73,6 +73,7 @@ header .action {
     width: 100%;
     position: fixed;
     top: 0;
+    left:0;
 }
 
 header .action ul {
@@ -338,6 +339,7 @@ header .container>ul li i {
 
 @media (max-width:767px) {
     .belong .container .content{
+        padding: 60px 0;
     grid-template-columns: 1fr 
     }
     .belong .container .content>div {
@@ -469,13 +471,11 @@ header .container>ul li i {
 }
 @media (max-width:1039px){
     .special-button {
-        font-size: 13px;
         padding:13px 20px;
     }
 }
 @media (max-width:767px){
     .special-button {
-        font-size: 11px;
         padding:12px 20px;
     }
 }
@@ -662,7 +662,7 @@ header .container>ul li i {
     color: var(--orange);
     font-size: 25px;
     letter-spacing: -0.5px;
-    font-weight: lighter;
+    font-weight: bolder;
 }
 .offers .offer .container div h3 {
     font-size: 45px;
