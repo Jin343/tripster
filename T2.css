@@ -917,7 +917,7 @@ margin: 10px 0;
 
 @media (max-width:787px) {
     .email .container {
-        min-width: 90%;
+        min-width: 95%;
     }
     .email .container .content p{
         font-size: 13px;
