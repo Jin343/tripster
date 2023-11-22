@@ -1,0 +1,1079 @@
+:root {
+    --orange: #ffab05;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    font-family: Tahoma;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+h3,
+h4,
+h2,
+p {
+    margin: 0;
+}
+
+header {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 0.3s 0.5s;
+}
+.logo {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom:20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: color(srgb 1 0.6719 0.0206);
+    color: white;
+    font-weight: 1000;
+    font-size: 25px;
+    padding: 25px 25px;
+    letter-spacing: -0.4px;
+}
+header .container{
+    display: flex;
+justify-content: center;
+align-items: center;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+header .container ul {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .action { 
+    margin: 0;
+    padding:25px;
+    background-color:color(srgb 0.1584 0.2093 0.2427);
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+header .action ul {
+    margin-left:calc(auto-1px)
+}
+
+
+header .container>ul {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+header .container>ul>li {
+    padding-bottom: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+@media (min-width:767px){
+header .container>ul>li:hover {
+    border-bottom-color: var(--orange);
+}
+
+header .container>ul>li:hover>a {
+    color: var(--orange);
+}
+header .container>ul li:hover ul {
+    display: block;
+}
+
+header .container>ul li ul li:hover a {
+    color: var(--orange);
+}
+
+}
+@media (max-width:767px){
+    header .container>ul>.clicked {
+        border-bottom-color: var(--orange);
+    }
+    header .container>ul>.clicked >a {
+        color: var(--orange);
+    }
+    header .container>ul .clicked ul {
+        display: block;
+    }
+    header .container>ul li ul .clicked a {
+        color: var(--orange);
+    }
+}
+header .container>ul>li>a {
+    font-weight: bolder;
+}
+
+header .container>ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+header .container>ul li ul {
+    position: absolute;
+    margin-top: 11.5px;
+    flex-direction: column;
+    height: 80px;
+    width: 140px;
+    padding: 20px;
+    font-size: 12px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+header .container ul li ul li:last-child {
+    padding-top: 10px;
+}
+
+header .container>ul li ul li a {
+    letter-spacing: 0.3px;
+    font-weight: lighter;
+    color: rgb(159, 159, 159);
+    transition: color 0.3s;
+}
+
+.hid {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+header .container>ul li i {
+    padding-left: 7px;
+    color: white;
+    opacity: 0.5s;
+}
+
+.landing {
+    position: relative;
+    height: 730px;
+    width: 100%;
+    background-image: url("https://template196744.motopreview.com/mt-demo/196700/196744/mt-content/uploads/2021/08/mt-2257-header-home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width:1039px) {
+    .landing {
+        height: 600px;
+    }
+    .logo{
+        font-size: 20px;
+        padding: 20px 30px;
+    }
+
+     header .container>ul {
+    margin-top: 20px;
+    font-size: 15px; 
+    }
+} 
+@media (max-width:767px) {
+    .landing {
+        height: 500px;
+    }
+    .logo{
+        font-size: 17px;
+        padding: 17px 30px;
+    }
+}
+
+.landing::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 72, 79, 0.186);
+}
+
+.landing>.text {
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.landing>.text h3 {
+    text-transform: uppercase;
+    font-size: 55px;
+}
+@media (max-width:1039px) {
+    .landing>.text h3 {
+        font-size: 45px;
+    }
+    .landing>.text {
+        font-size: 20px;
+    }
+}
+@media (max-width:787px) {
+    .landing>.text h3 {
+        padding: 10px 0;
+        font-size: 40px;
+    }
+    .landing>.text {
+        font-size: 17px;
+    }
+}
+
+.belong {
+    padding: 70px 0;
+}
+
+.belong .HotDeals {
+    padding: 30px 0;
+}
+
+.belong .container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.special-text {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(121, 121, 121);
+}
+
+.special-text h3 {
+    padding-bottom: -0.5s;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 45px;
+    letter-spacing: -0.6px;
+}
+
+.special-text::before {
+    content: "";
+    height: 5px;
+    width: 50px;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: var(--orange);
+}
+
+@media (max-width:787px) {
+    .special-text h3 {
+        padding-bottom: 10px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width:1039px){
+    .special-text h3 {
+        font-size: 30px;
+    }
+}
+
+.belong .container .content,
+.HotDeals .content {
+    margin: 60px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+
+.belong .container .content>div {
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+}
+
+@media (max-width:1039px) and (min-width:767px) {
+    .belong .container .content {
+        margin: 60px 10px;
+    }
+}
+
+@media (max-width:767px) {
+    .belong .container .content{
+    grid-template-columns: 1fr 
+    }
+    .belong .container .content>div {
+        margin: 10px auto;
+    }
+}
+
+.belong .container .content>div:last-child {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    gap:10px;
+}
+@media (max-width:767px){
+    .belong .container .content>div:last-child {
+       grid-template-columns: 1fr;
+    }
+}
+/* .belong .content>div:first-child, */
+.belong .content>div:last-child>div
+/* ,.HotDeals .cont .item */
+ {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.belong .content >div >div {
+    margin: 0 auto;
+}
+.belong .content div div .text-above,
+.belong .content div div img{
+    margin: 0 10px;
+}
+
+@media (max-width:767px) {
+    .belong .container {
+        width: 100%;
+    }
+}
+
+.belong .content>div:first-child::before,
+.belong .content>div:last-child>div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 98%;
+    width: 100%;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+.belong .content>div:first-child:hover::before,
+.belong .content>div>div:hover::before {
+    background-color: rgba(195, 86, 28, 0.3);
+}
+@media (max-width:767px){
+    .belong .content>div:last-child p{
+        margin-left:-10px !important
+    }
+    .belong .content>div:first-child::before,
+    .belong .content>div:last-child>div::before {
+        width: 96%;
+        height: 100%;
+    }}
+.text-above {
+    width: 100%;
+    flex-direction: column;
+    z-index: 2;
+    display: flex;
+    justify-content: end;
+    padding:  20px ;
+    margin: 0;
+    color: white;
+}
+
+.text-above p{
+    font-family: sans-serif;
+    font-weight: lighter;
+    padding-top: 10px;
+
+}
+.text-above h3 {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+}
+@media (max-width:1039px){
+.text-above h3 {
+    font-size: 17px;
+}
+.text-above div + h3 {
+    font-size: 15px;
+}
+}
+@media (max-width:767px){
+    .belong .content>div:last-child p span:first-child{
+        font-size: 15px !important;
+    }
+    .belong .content>div:last-child p span:last-child{
+        font-size: 15px !important;
+    }
+    .text-above h3 {
+        font-size: 20px !important;
+    }
+    .text-above div + h3 {
+        font-size: 17px !important;
+    }
+}
+.special-button {
+    width: fit-content;
+    cursor: pointer;
+    margin: 20px 0;
+    background-color: var(--orange);
+    color: white;
+    border: 0;
+    padding:15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    transition: color 0.3s, background-color 0.3s;
+}
+@media (max-width:1039px){
+    .special-button {
+        font-size: 13px;
+        padding:13px 25px;
+    }
+}
+.special-button:hover {
+    color: var(--orange);
+    background-color: white;
+}
+.text-above:first-child{
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    top:0;
+    justify-content: end;
+}
+.belong .content>div:last-child p,
+.cont div p {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    color: white;
+    background-color: var(--orange);
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+.belong .content>div:last-child p{
+    margin-left: -20px;
+}
+.belong .content>div:last-child p span:first-child,
+.cont div p span:first-child {
+    padding-left: 10px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.belong .content>div:last-child p span:last-child,
+.cont div p span:last-child {
+    padding-left: 8px;
+    font-weight: 800;
+    font-size: 20px;
+}
+@media (max-width:1039px){
+    .belong .content>div:last-child p span:first-child,
+    .cont div p span:first-child {
+        font-size: 13px;
+    padding-left: 0px;
+    }
+    .belong .content>div:last-child p span:last-child,
+    .cont div p span:last-child {
+    padding-left: 0px;
+        font-size: 12px;}}
+        
+.HotDeals .container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.HotDeals .container .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HotDeals .container .content .cont {
+    position: relative;
+}
+.cont >div{
+    text-transform: capitalize;
+    position: absolute;
+    height: 25%;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+}
+.cont >div p{
+    width: 30%;
+    padding: 7px 20px;
+}
+.HotDeals .container .content .cont {
+    margin: 0 10px;
+    height: 400px;
+    z-index: -1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    width: 370px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.HotDeals .container .content .cont:nth-child(1) {
+    background-image: url("https://www.traveloffpath.com/wp-content/uploads/2023/03/Traditional-whitewashed-fisherman-village-with-boats-floating-and-a-popular-travel-and-holiday-destination-on-Costa-Brava-Catalonia-Spain.jpg");
+}
+
+.HotDeals .container .content .cont:nth-child(2) {
+    background-image: url("https://static.israel21c.org/www/uploads/2021/04/shutterstock_739019641-e1644133226506.jpg");
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.HotDeals .container .content .cont:nth-child(3) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/32/20190616154621%21Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg");
+}
+
+@media (max-width:1090px) and (min-width:760px) {
+    .HotDeals .container {
+        width: 100%;
+    }
+
+    .HotDeals .container .content {
+        margin: 60px 15px
+    }
+}
+
+@media (max-width:767px) {
+    .HotDeals .container .content {
+        flex-wrap: wrap;
+    }
+
+    .HotDeals .container .content .cont {
+        margin: 10px 0;
+        height: 500px;
+    }
+}
+
+.bullets {
+    width: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bull {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bull:hover {
+    background-color: rgb(252, 184, 147);
+}
+
+.offers {
+    position: relative;
+}
+
+.offers .offer {
+    background-image: url("https://cdn.wallpapersafari.com/1/95/NkuV8o.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    margin: 30px 0 0 0;
+}
+
+.margin-top {
+    margin: 60px 0 0 0;
+}
+
+.offers .offer .container {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    align-items: start;
+    width: 80%;
+    z-index: 1;
+    color: white;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.offers .offer .container div:first-child p:first-child {
+    color: var(--orange);
+    font-size: 25px;
+    letter-spacing: -0.5px;
+    font-weight: lighter;
+}
+.offers .offer .container div h3 {
+    font-size: 45px;
+}
+
+.offers .offer .container div h2 {
+    margin-top: -20px;
+    font-size: 70px;
+}
+@media (max-width:1039px) {
+    .offers .offer .container div:first-child p:first-child {
+        font-size: 17px;
+    }
+    .offers .offer .container div h3 {
+        font-size: 35px;
+        padding-bottom: 10px;
+    }
+
+    .offers .offer .container div h2 {
+        font-size: 50px;
+    }
+    .offers .offer {
+        height: 450px;
+    }
+    .offers .offer .container{
+        height: 60%;
+    }
+}
+@media (max-width:787px) {
+    .offers .offer .container div h2 {
+        font-size: 45px;
+    }
+    .offers .offer .container div h3 {
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+}
+
+.offers .offer .container div:last-of-type {
+    margin-top: 18px;
+    width: 70%;
+}
+
+.offers .offer .container button {
+    margin-bottom: 0;
+}
+
+.icon {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    color: white;
+    font-size: 20px;
+    transform: translate(0, -50%);
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.icon:first-child::before {
+    content: "˃";
+    position: absolute;
+    top: 49%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.icon:hover::before {
+    color: black;
+}
+
+.icon:hover {
+    background-color: white;
+}
+
+.icon:nth-child(2)::before {
+    content: "˂";
+    position: absolute;
+    top: 49%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    transition: color 0.3s;
+}
+
+.icon:nth-child(2) {
+    left: 4%;
+}
+
+.icon:first-of-type {
+    right: 4%;
+}
+
+@media (max-width:787px) {
+    .icon {
+        height: 35px;
+        width: 35px;
+        font-size: 15px;
+    }
+}
+
+.tours .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tours .container .content {
+    width: 93%;
+    margin: 70px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+.tours .container .content .item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px;
+}
+
+@media (max-width:787px) {
+    .tours .container .content {
+        width: 85%;
+        margin: 20px auto;
+        max-height: 3500px;
+        grid-template-rows: repeat(auto-fit, 350px);
+    }
+
+    .tours .container .content .item {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width:1023px) and (min-width:787px) {
+    .tours .container .content {
+        max-height: 2800px;
+        grid-template-rows: repeat(auto-fit, 250px);
+    }
+}
+
+.tours .container .content .item:nth-child(1) {
+    background-image: url("https://images.adsttc.com/media/images/64a2/cdae/cb9c/464f/a63a/9764/large_jpg/cairo-architecture-city-guide-exploring-the-unique-architectural-blend-of-historical-and-contemporary-in-egypts-bustling-capital_23.jpg?1688391095");
+}
+
+.tours .container .content .item:nth-child(2) {
+    background-image: url("https://a.cdn-hotels.com/gdcs/production26/d1811/69ca3700-9beb-11e8-a942-0242ac110007.jpg?impolicy=fcrop&w=800&h=533&q=medium");
+}
+
+.tours .container .content .item:nth-child(3) {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/32/20190616154621%21Echo_Park_Lake_with_Downtown_Los_Angeles_Skyline.jpg");
+}
+
+.tours .container .content .item:nth-child(4) {
+    background-image: url("https://www.traveloffpath.com/wp-content/uploads/2023/03/Traditional-whitewashed-fisherman-village-with-boats-floating-and-a-popular-travel-and-holiday-destination-on-Costa-Brava-Catalonia-Spain.jpg");
+}
+
+.tours .container .content .item:nth-child(5) {
+    background-image: url("https://cdn.wallpapersafari.com/1/95/NkuV8o.jpg");
+}
+
+.tours .container .content .item:nth-child(6) {
+    background-image: url("https://res.cloudinary.com/uktv/image/upload/v1375346157/uvqqzh20rqargzgyuqzv.jpg");
+}
+
+.tours .container .content .item:nth-child(7) {
+    background-image: url("https://static.israel21c.org/www/uploads/2021/04/shutterstock_739019641-e1644133226506.jpg");
+}
+
+.tours .container .content .item:nth-child(8) {
+    background-image: url("https://www.fragomen.com/a/web/9fuCio7rWyhYajSX6dahBR/3hJBka/dubai_hero_0.jpg");
+}
+
+.tours .container .content p {
+    color: white;
+    text-shadow: 0 0 5px #6e767d82;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 28px;
+    padding: 20px;
+    font-weight: 800;
+}
+
+.email {
+    padding: 70px 0;
+    background-color: var(--orange);
+}
+
+.email .container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.email .container .content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    align-items: start;
+    flex-direction: column;
+    color: white;
+}
+
+.email .container .content::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+}.email .container .content p{
+margin: 10px 0;
+}
+.h3-edit {
+    font-weight: 800;
+    font-style: normal;
+    font-family: 'Prompt', sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+
+}
+@media (max-width:1039px) {
+    .email .container {
+        width: 80%;
+    }
+
+    .email .container .content h3 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:787px) {
+    .email .container {
+        width: 80%;
+    }
+    .email .container .content p{
+        font-size: 13px;
+    }
+    .email .container .content h3 {
+        font-size: 17px;
+    }
+}
+
+.email .container .content .inputs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .container .content .inputs input[type="email"] {
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+.email .container .content .inputs button {
+    background-color: rgb(17, 19, 38);
+    color: white;
+}
+
+.email .container .content div button:hover {
+    background-color: white;
+    color: rgb(17, 19, 38);
+}
+
+.email .container .content form {
+    position: relative;
+    width: 300px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.reqText {
+    position: absolute;
+    color: rgb(227, 0, 0);
+    font-size: 12px;
+    top: 5px;
+    right: 5px;
+}
+
+.doneText,
+.notDoneText {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    bottom: 5px;
+    left: 5px;
+}
+
+footer {
+    padding: 40px 0;
+    background-color: color(srgb 0.1584 0.2093 0.2427);
+}
+
+footer .container {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width:1200px) {
+    footer .container {
+        width: 85%;
+    }
+}
+
+footer .container .sec1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    color: white;
+}
+
+footer .container .sec1 p {
+    margin: 35px 0;
+}
+
+footer .container .sec1 .icons {
+    color: rgb(218, 218, 218);
+    font-size: 40px;
+}
+
+footer .container .sec2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+footer .container .sec2 a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.whiteToOrange {
+    color: white;
+    transition: color 0.3s;
+}
+
+.whiteToOrange:hover {
+    color: var(--orange);
+}
+
+footer .container .sec2>a:nth-child(2) {
+    color: var(--orange);
+    transition: color 0.3s;
+}
+
+footer .container .sec2>a:nth-child(2):hover {
+    color: white;
+}
+
+footer .container .sec2 p {
+    padding: 20px 0;
+    font-size: 13px;
+}
+
+footer .container .sec2 .icons {
+    width: 100%;
+    display: flex;
+    justify-content: end
+}
+
+footer .container .sec2 .icons a {
+    z-index: 2;
+    margin: 1%;
+    padding: 17px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container .sec2 .icons a::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+footer .container .sec2 .icons a:nth-child(1):hover::after {
+    background-color: color(srgb 0.2576 0.4038 0.6995);
+    border: 1px solid color(srgb 0.2576 0.4038 0.6995);
+}
+
+footer .container .sec2 .icons a:nth-child(2):hover::after {
+    background-color: #d62976;
+    border: 1px solid #d62976;
+}
+
+footer .container .sec2 .icons a:nth-child(3):hover::after {
+    background-color: color(display-p3 0.9176 0.2 0.1373);
+    border: 1px solid color(display-p3 0.9176 0.2 0.1373);
+}
+
+footer .container .sec2 .icons a:nth-child(4):hover::after {
+    background-color: color(srgb 0.4318 0.757 0.8929);
+    border: 1px solid color(srgb 0.4318 0.757 0.8929);
+}
+
+.final {
+    background-color: white;
+    color: #6e767d;
+    text-align: center;
+    font-weight: lighter;
+    padding: 15px 0;
+    font-size: 13px;
+    ;
+}
+
+.final span {
+    cursor: pointer;
+    color: #6e767d;
+    transition: color 0.3s;
+}
+
+.final span:hover {
+    color: var(--orange);
+}
