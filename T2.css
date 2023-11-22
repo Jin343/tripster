@@ -792,8 +792,13 @@ header .container>ul li i {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 }
-
+@media (min-width:767px){
 .tours .container .content .item {
+    min-height: 250px;
+}
+}
+.tours .container .content .item {
+    
     background-repeat: no-repeat;
     background-size: cover;
     margin: 5px;
@@ -870,7 +875,7 @@ header .container>ul li i {
 }
 
 .email .container {
-    width: 70%;
+    width: 40%;
     margin: 0 auto;
     display: flex;
     justify-content: start;
@@ -878,10 +883,14 @@ header .container>ul li i {
 }
 
 .email .container .content {
+    width: 100%;
     position: relative;
     padding-left: 50px;
     align-items: start;
     color: white;
+}
+.email .container .content form{
+    width: 100%;
 }
 
 .email .container .content::before {
@@ -917,7 +926,7 @@ margin: 10px 0;
 
 @media (max-width:787px) {
     .email .container {
-        min-width: 95%;
+        min-width: 97%;
     }
     .email .container .content p{
         font-size: 13px;
